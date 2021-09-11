@@ -14,10 +14,12 @@ int32_t main() {
     while (ff < n || ss < m) {
         if (b[ss] < a[ff]) {
             ans += (n - ff);
-            ss++;
+            if (ss + 1 < m) ss++;
+            else break;
         }
         else {
-            ff++;
+            if (ff + 1 < n) ff++;
+            else break;
         }
     }
     cout << ans;
