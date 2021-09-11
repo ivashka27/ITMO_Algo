@@ -1,3 +1,4 @@
+  
 #include<bits/stdc++.h>
 
 #define int long long
@@ -19,14 +20,28 @@ int32_t main() {
         int sum = a[i] + b[j];
         if (sum == s) {
             cout << i << " " << j << "\n";
-            break;
+            return 0;
         }
-        else if (sum < s) {
-            i++; 
+        if (a[i] < b[j]) i++;
+        else j++;
+    }
+    
+    while (i < n) {
+        int sum = a[i] + b[j];
+        if (sum == s) {
+            cout << i << " " << j << "\n";
+            return 0;
         }
-        else {
-            j--;
+        i++;
+    }
+    
+    while (j >= 0) {
+        int sum = a[i] + b[j];
+        if (sum == s) {
+            cout << i << " " << j << "\n";
+            return 0;
         }
+        j--;
     }
     
     return 0;
