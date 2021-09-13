@@ -23,7 +23,6 @@ int32_t main() {
             while (i + 1 < n && a[i + 1] == a[i]) cnt1++, i++;
             while (j + 1 < m && b[j + 1] == b[j]) cnt2++, j++;
             ans += cnt1 * cnt2;
-
         }
         i++, j++;
     }
